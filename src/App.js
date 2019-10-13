@@ -1,32 +1,31 @@
-import React from 'react';
-import './App.css';
-import Layout from "./components/Layout";
-import Home from "./components/Home";
-import Weather from "./components/Weather";
-import News from "./components/News";
-import CountriesInfo from "./components/CountriesInfo";
-import Navigator from "./components/Navigator";
-import { Link, BrowserRouter as Router, Route, Switch, withRouter } from "react-router-dom";
- class App extends React.Component{
-  
-  
-  render(){
-  return (
-      <React.Fragment>
-        <Navigator/>
-      <Layout>
-      
-      <Router>
-        <Switch> 
-          <Route exact path="/" component={Home}/>
-          <Route exact path="/weather" component={Weather}/>
-          <Route exact path="/countriesInfo" component={CountriesInfo}/>
 
-        </Switch>
-      </Router>
-      </Layout>
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import  Home  from './components/Home';
+import  Weather  from './components/Weather';
+import  CountriesInfo from './components/CountriesInfo';
+import  NoMatch  from './components/NoMatch';
+import  Layout  from './components/Layout';
+import  Navigator  from './components/Navigator';
+import  Jumbotron  from './components/Jumbotron';
+
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <Router>
+          <Navigator/>
+         
+          <Layout>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/weather" component={Weather} />
+              <Route path="/countriesInfo" component={CountriesInfo} />
+            </Switch>
+          </Layout>
+        </Router>
       </React.Fragment>
-  );
+    );
   }
 }
 

@@ -1,7 +1,32 @@
 import React, { Component } from 'react'; 
 import Form from "./Form";
 import Desplay from "./Desplay";
+import styled from 'styled-components';
+import image1 from './image1.jpg';
+import { Jumbotron as Jumbo, Container } from 'react-bootstrap';
 const API_KEY = "0d3f90f30436ef1590f3b4fd47867da0";
+const Styles = styled.div`
+  .jumbo {
+    background: url(${image1}) no-repeat fixed bottom;
+    background-size: cover;
+    color: #efefef;
+    height: 120px;
+    position: relative;
+    z-index: -2;
+  }
+
+  .overlay {
+    background-color: #000;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+`;
+
 
 class Weather extends Component{
     state={
@@ -67,9 +92,14 @@ class Weather extends Component{
           render(){
             return(
               <div >
-               <div className="center">
-                   World Weather Finder
-                </div>
+                  <Styles>
+                    <Jumbo fluid className="jumbo">
+                      <div className="overlay"></div>
+                          <Container className = "contain">
+                            World Weather Finder
+                      </Container>
+                    </Jumbo>
+                  </Styles>
                 
                 <div className="wrapper">
       
@@ -77,7 +107,7 @@ class Weather extends Component{
                 
                   <div className="form-container">
                   
-                   <div className="col-xs-10 container-home">
+                   <div className="col-xs-10 form-container">
       
                         <Form getInfo={this.getInfo} />
       
