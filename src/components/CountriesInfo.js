@@ -1,6 +1,30 @@
 import React, { Component } from 'react'; 
 import FormCountry from "./FormCountry";
 import DisplayInfo from "./DisplayInfo";
+import styled from 'styled-components';
+import image2 from './image2.jpg';
+import { Jumbotron as Jumbo, Container } from 'react-bootstrap';
+const Styles = styled.div`
+  .jumbo {
+    background: url(${image2}) no-repeat fixed bottom;
+    background-size: cover;
+    color: #efefef;
+    height: 120px;
+    position: relative;
+    z-index: -2;
+  }
+
+  .overlay {
+    background-color: #000;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+`;
 
 class CountriesInfo extends Component{
     state={
@@ -47,10 +71,14 @@ class CountriesInfo extends Component{
         render(){
             return(
             <div>
-              
-                <div className="center_info">
-                       Country's Info
-                </div>
+              <Styles>
+                <Jumbo fluid className="jumbo">
+                  <div className="overlay"></div>
+                      <Container className = "contain">
+                        World Information Finder
+                  </Container>
+                </Jumbo>
+              </Styles>
                 
                 <div className="wrapper">
           
@@ -74,11 +102,7 @@ class CountriesInfo extends Component{
                               
                               nativeName = {this.state.nativeName}
     
-                              
-          
-                            />
-          
-                         
+                           />
           
                         </div>
           
