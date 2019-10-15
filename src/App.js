@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import  Home  from './components/Home';
@@ -6,7 +5,6 @@ import  Weather  from './components/Weather';
 import  CountriesInfo from './components/CountriesInfo';
 import  Layout  from './components/Layout';
 import  Navigator  from './components/Navigator';
-import  Jumbotron  from './components/Jumbotron';
 
 class App extends Component {
   render() {

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import FormCountry from "./FormCountry";
 import DisplayInfo from "./DisplayInfo";
 import styled from 'styled-components';
-import Jumbotron  from './Jumbotron';
 import image2 from './image2.jpg';
 import { Jumbotron as Jumbo, Container } from 'react-bootstrap';
 const Styles = styled.div`
