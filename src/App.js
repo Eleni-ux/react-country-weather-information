@@ -14,8 +14,7 @@ class App extends Component {
       <React.Fragment>
         <Router>
           <Navigator/>
-         
-          <Layout>
+            <Layout>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/weather" component={Weather} />

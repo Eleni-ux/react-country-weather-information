@@ -1,8 +1,8 @@
 import React from 'react'
 import  Jumbotron  from './Jumbotron';
- const Home = () => (
+const Home = () => (
   <div>
      <Jumbotron />
-    </div>
+  </div>
 )
 export default Home;

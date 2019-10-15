@@ -2,7 +2,7 @@ import React from 'react';
 import { Jumbotron as Jumbo, Container } from 'react-bootstrap';
 import styled from 'styled-components';
 import boatImage from '../assets/boatImage.jpg';
-
+import { Link } from 'react-router-dom';
 const Styles = styled.div`
   .jumbo {
     background: url(${boatImage}) no-repeat fixed bottom;

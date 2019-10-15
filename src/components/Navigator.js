@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const Styles = styled.div`
   .navbar {
-    background-color: rgb(1, 1, 27);
+    background-color: rgb(1, 1, 15);
     padding: 30px;
    
   }
