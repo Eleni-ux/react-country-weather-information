@@ -29,7 +29,7 @@ const Styles = styled.div`
       <div className="overlay"></div>
       <Container>
         <h1>Welcome</h1>
-        <p> Weather and information Finder </p>
+        <p> Country's Weather and information Finder </p>
       </Container>
     </Jumbo>
   </Styles>
