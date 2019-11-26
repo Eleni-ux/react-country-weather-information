@@ -42,7 +42,7 @@ class Weather extends Component{
         error: undefined
     }
     convertTemprature = (temprature) => {
-      return (temprature + (9/5)) + 32;
+      return (temprature * (9/5)) + 32;
      }
     getInfo = async(e) => {
         e.preventDefault();
